@@ -1,0 +1,21 @@
+.borda{
+    border: 1px solid black;
+    text-align: center;
+}
+table{
+    margin: 300px auto;   
+    font-size: 20px;
+    border: 1px solid black;
+}
+thead{
+    text-align: center;
+}
+.escuro{
+    background-color: rgba(18, 97, 16, 0.842);
+}
+.claro{
+    background-color: rgba(45, 196, 7, 0.637)
+}
+.maisclaro{
+    background-color: rgba(128, 128, 128, 0.200);
+}
