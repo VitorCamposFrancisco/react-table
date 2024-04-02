@@ -1,24 +1,53 @@
 import '../style/custom.css';
 import { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row, Table } from 'react-bootstrap';
 
 function PriceList(){
+    let id_produto  = 1;
+    let id_produto2 = 2;
+    let id_produto3 = 3;
 
-    let valor_a = 6
-    let valor_b = 6;
-    let [total, setTotal] = useState(valor_a + valor_b);
+    let camisa1 = "Camisa Torcedor Palmeiras - P";
+    let camisa2 = "Camisa Jogador Palmeiras - M";
+    let camisa3 = "Camisa Torcedor Palmeiras - G";
 
-    function acaoBotao (){
-        setTotal(total + 1);
-        console.log(total);
-    }
+    let categ1 = "Feminino";
+    let categ2 = "Masculino";
+    let categ3 = "Masculino";
+
+    let qtde1 = 1;
+    let qtde2 = 2;
+    let qtde3 = 3;
+    let qtdeTotal = qtde1 + qtde2 + qtde3;
+
+    let valorUnit1 = 299.90;
+    let valorUnit2 = 499.90;
+    let valorUnit3 = 299.90;
+    let valorUnitTotal = valorUnit1 + valorUnit2 + valorUnit3;
+
+    let valorTotal1 = valorUnit1
+    * qtde1;
+    let valorTotal2 = valorUnit2 * qtde2;
+    let valorTotal3 = valorUnit3 * qtde3;
+    let total = valorTotal1 + valorTotal2 + valorTotal3;
+
+
+    const formatado  = valorUnitTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const formatado2 = valorTotal3.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const formatado3 = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const Unit1      = valorUnit1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const Unit2      = valorUnit2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const Unit3      = valorUnit3.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const total1     = valorTotal1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const total2     = valorTotal2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
 
     return(
         <div>
-            <table cellspacing="0">
+            <Table striped bordered hover responsive variant="dark">
         <thead>
             <tr>
-                <td colSpan="6" class="escuro">
+                <td colSpan="6" class="escuro" className="text-center">
                     VENDAS - MEU PALMEIRAS
                 </td>
             </tr>
@@ -46,91 +75,78 @@ function PriceList(){
         <tbody>
         <tr class="maisclaro">
             <td class="borda">
-                1
+                {id_produto}
             </td>
             <td class="borda">
-                Camisa Torcedor Palmeias - M
+                {camisa1}
             </td>
             <td class="borda">
-                Masculina
+                {categ1}
             </td>
             <td class="borda">
-                1
+                {qtde1}
             </td>
             <td class="borda">
-                R$299,90
+                {Unit1}
             </td>
             <td class="borda">
-                R$299,90
+                {total1}
             </td>   
         </tr>
         <tr class="maisclaro">
             <td class="borda">
-                2
+                {id_produto2}
             </td>
             <td class="borda">
-                Camisa Jogador Palmeias - M
+                {camisa2}
             </td>
             <td class="borda">
-                Masculina
+                {categ2}
             </td>
             <td class="borda">
-                2
+                {qtde2}
             </td>
             <td class="borda">
-                R$499,90
+                {Unit2}
             </td>
             <td class="borda">
-                R$999,80
+                {total2}
             </td>   
         </tr>
         <tr class="maisclaro"  >
             <td class="borda">
-                3
+                {id_produto3}
             </td>
             <td class="borda">
-                Camisa Torcedor Palmeias - G
+                {camisa3}
             </td>
             <td class="borda">
-                Feminina
+                {categ3}
             </td>
             <td class="borda">
-                3
+                {qtde3}
             </td>
             <td class="borda">
-                R$299,90
+                {Unit3}
             </td>
             <td class="borda">
-                R$899,70
+                {formatado2}
             </td>   
         </tr>
         <tr class="escuro">
-            <td colspan="3">
-                
+            <td colspan="3"></td>
+            <td class="borda">
+                {qtdeTotal}
             </td>
             <td class="borda">
-                6
+                {formatado}
             </td>
             <td class="borda">
-                R$1099,70
-            </td>
-            <td class="borda">
-                R$2199,40
+                {formatado3}
             </td>
         </tr>
         </tbody>
-        <tr>
-            <th>Valor 1</th>
-            <th>Valor 2</th>
-            <th>Total</th>
-        </tr>
-        <tr>
-            <td>{valor_a}</td>
-            <td>{valor_b}</td>
-            <td>{total}</td>
-        </tr>
-        <Button variant="success" onClick={acaoBotao}>VALOR</Button>
-    </table>
+    </Table>
         </div>
     );
 }
