@@ -25,11 +25,11 @@ function PriceList(){
         valorUnitario: 299.90,
     };
 
-    let lista_produto = {
+    let lista_produto = [
         produto,
         produto2,
         produto3,
-    }
+    ];
 
 
     
@@ -65,26 +65,34 @@ function PriceList(){
             </tr>
         </thead>
         <tbody>
-        <tr class="maisclaro">
-            <td class="borda">
-                {produto2.id}
-            </td>
-            <td class="borda">
-                {produto2.produto}
-            </td>
-            <td class="borda">
-                {produto2.categoria}
-            </td>
-            <td class="borda">
-                {produto2.quantidade}
-            </td>
-            <td class="borda">
-                {produto2.valorUnitario}
-            </td>
-            <td class="borda">
-                {produto2.quantidade * produto2.valorUnitario}
-            </td>   
-        </tr>
+            {
+                lista_produto.map(
+                    function(produto){
+                        return(<tr class="maisclaro">
+                        <td class="borda">
+                            {produto2.id}
+                        </td>
+                        <td class="borda">
+                            {produto2.produto}
+                        </td>
+                        <td class="borda">
+                            {produto2.categoria}
+                        </td>
+                        <td class="borda">
+                            {produto2.quantidade}
+                        </td>
+                        <td class="borda">
+                            {produto2.valorUnitario}
+                        </td>
+                        <td class="borda">
+                            {produto2.quantidade * produto2.valorUnitario}
+                        </td>   
+                    </tr>
+                    )
+                        
+                    }
+                )
+            }
         <tr class="maisclaro"  >
             <td class="borda">
                 {produto3.id}
