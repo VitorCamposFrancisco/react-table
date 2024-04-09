@@ -11,11 +11,11 @@ function SecondExercise () {
     function alterarNome(elemento){
         setNome(elemento.target.value)
     }
-    function alterarSalario(valor){
-        setSalario(valor.target.value)
+    function alterarSalario(elemento){
+        setSalario(elemento.target.value)
     }
-    function alterarReajuste(muda){
-        setReajuste(muda.target.value)
+    function alterarReajuste(elemento){
+        setReajuste(elemento.target.value)
     }
     
     let resultado = parseFloat(salario) + (parseFloat(salario) * (parseFloat(reajuste) / 100))
