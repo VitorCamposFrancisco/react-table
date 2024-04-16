@@ -8,8 +8,6 @@ function FifthExercise (){
     let [resultado, setTotal] = useState(); 
     const [isVisible, setIsVisible] = useState();
     
-   
-    
     
 
     function Nome(valor){

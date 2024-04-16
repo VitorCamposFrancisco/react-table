@@ -13,8 +13,8 @@ function PrincipalPage(){
             <FirstExercise/>
             <SecondExercise/>
             <ThirdExercise/>
-            <FourthExercise/>
             <FifthExercise/>
+            <FourthExercise/>
         </div>
     );
 }

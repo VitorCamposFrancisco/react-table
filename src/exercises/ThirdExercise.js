@@ -47,7 +47,7 @@ function ThirdExercise() {
                                     <input class="form-control" type="number" placeholder="Nº de Empates" onChange={Empates} disabled={!vitorias}></input>
                                 </div>
                                 <div class="col-sm-12 col-md-3 col-lg-3 mt-4">
-                                    <button type="button" class="btn btn-primary" disabled={!nome || !vitorias || !empates} onClick={acaoBotao}>Calcular</button>
+                                    <button type="button" class="btn btn-primary " disabled={!nome || !vitorias || !empates} onClick={acaoBotao}>Calcular</button>
                                 </div>
                         </div>
                     </div>
