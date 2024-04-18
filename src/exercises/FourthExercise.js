@@ -5,11 +5,9 @@ import { Alert } from "react-bootstrap";
 
 function FourthExercise() {
     let [cep, setCep] = useState();
-    let [rua, setRua] = useState([]);
-    let [bairro, setBairro] = useState([]);
-    let [cidade, setCidade] = useState([]);
-    let [estado, setEstado] = useState([]);
+    let [endereco, setEndereco] = useState([]);
     
+
     let [status, setStatus] = useState({
         "variant" : "",
         "message" : ""
@@ -27,11 +25,11 @@ function FourthExercise() {
             });
 
             console.log(JSON.stringify(response.data));
-            setRua(response.data)
-            setBairro(response.data)
-            setCidade(response.data)
-            setEstado(response.data)
+            setEndereco(response.data)
+            
+
         }).catch(function (error) {
+
             console.log(error);
             setStatus({
                 "variant" : "danger",
@@ -65,16 +63,16 @@ function FourthExercise() {
                 </div> 
                 <div className="row mt-2">
                         <div className="col-12">
-                            Rua:  {rua.logradouro}
+                            Rua:  {endereco.logradouro}
                         </div>
                         <div className="col-12">
-                            Bairro:  {bairro.bairro}
+                            Bairro:  {endereco.bairro}
                         </div>
                         <div className="col-12">
-                            Cidade:  {cidade.localidade}
+                            Cidade:  {endereco.localidade}
                         </div>
                         <div className="col-12">
-                            Estado:  {estado.uf}
+                            Estado:  {endereco.uf}
                         </div>
                 </div>
         </div>

@@ -4,6 +4,7 @@ import FourthExercise from '../exercises/FourthExercise';
 import SecondExercise from '../exercises/SecondExercise';
 import ThirdExercise from '../exercises/ThirdExercise';
 import FifthExercise from '../exercises/FifthExercise';
+import SixthExercise from '../exercises/SixthExercise';
 
 function PrincipalPage(){
     
@@ -15,6 +16,7 @@ function PrincipalPage(){
             <ThirdExercise/>
             <FifthExercise/>
             <FourthExercise/>
+            <SixthExercise/>
         </div>
     );
 }
