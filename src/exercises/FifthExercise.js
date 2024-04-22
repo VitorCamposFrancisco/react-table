@@ -25,7 +25,7 @@ function FifthExercise (){
         setIsVisible(true)
     }
     return(
-        <div>
+        <div className="container">
             <div className="container pt-5">
                 <div className="card">
                     <div className="card-title p-2 border-bottom card-header">

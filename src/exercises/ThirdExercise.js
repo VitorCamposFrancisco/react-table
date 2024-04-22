@@ -27,7 +27,7 @@ function ThirdExercise() {
     }
     return (
         <div>
-            <div class="container">
+            <div class="container pt-3">
                 <div class="card">
                     <div class="card-title p-2 border-bottom card-header">
                         <h3>Exercício 3</h3>
